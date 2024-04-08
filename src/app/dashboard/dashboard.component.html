@@ -1,0 +1,25 @@
+<button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-expanded="false" aria-controls="menu">
+  Toggle width collapse
+</button>
+<div class="collapse collapse-horizontal max-w" id="menu">
+  <div class="card card-body">
+    <ul *ngIf="logado" class="nav flex-column">
+      <li class="nav-item">
+        <a class="nav-link active" aria-current="page" href="#">Active</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" (click)="logout()">Sair</a>
+      </li>
+    </ul>
+  </div>
+</div>
+<router-outlet></router-outlet>

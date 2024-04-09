@@ -17,6 +17,7 @@ export class DashboardComponent {
 
   public ngOnInit(): void {
     this.logado = this.userHasSession();
+    
   }
 
   private userHasSession(): boolean {

@@ -1,5 +1,6 @@
 import { Routes } from '@angular/router';
 import { DashboardComponent } from './features/dashboard/dashboard.component';
+import { DeviceFormComponent } from './features/device-form/device-form.component';
 import { HomeComponent } from './features/home/home.component';
 import { LoginComponent } from './features/login/login.component';
 import { PageNotFoundComponent } from './features/page-not-found/page-not-found.component';
@@ -20,6 +21,10 @@ export const routes: Routes = [
             {
                 path: 'home',
                 component: HomeComponent
+            },
+            {
+                path: 'cadastrar',
+                component: DeviceFormComponent
             },
         ]
     },

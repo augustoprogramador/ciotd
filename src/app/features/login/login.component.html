@@ -1,18 +1,21 @@
 <div class="container-fluid">
     <div class="row justify-content-center">
         <div class="col-3 align-self-center">
-            <form>
+            <form [formGroup]="form">
                 <div class="mb-3">
-                    <label for="email" class="form-label">Login</label>
-                    <input type="email" class="form-control" id="email" aria-describedby="emailHelp">
+                    <label for="username" class="form-label">Login</label>
+                    <input formControlName="username" type="username" class="form-control" id="username" aria-describedby="usernameHelp">
                 </div>
                 <div class="mb-3">
                     <label for="senha" class="form-label">Senha</label>
-                    <input type="password" class="form-control" id="senha">
+                    <input type="password" formControlName="senha" class="form-control" id="senha">
                 </div>
                 <div class="mb-3 form-check">
                     <input type="checkbox" class="form-check-input" id="loginPersist">
                     <label class="form-check-label" for="loginPersist">Permanecer logado</label>
+                </div>
+                <div class="mb-3 form-check">
+                    <button type="button" class="link" (click)="signup()">Não tem conta? Cadastre-se!</button>
                 </div>
                 <button class="btn btn-primary" (click)="login()">Entrar</button>
             </form>
